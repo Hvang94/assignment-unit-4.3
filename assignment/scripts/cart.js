@@ -1,19 +1,22 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
+let basket = [];
+function addItem(item) {
+    basket.push(item);
+    return true;
+}
+console.log(basket);
+function listItems() {
+    for (let index = 0; index < basket.length; index++) {
+        console.log(basket[index]);
+    }
+}
+function empty() {
+    basket = [];
+  }
+  empty();
 
-
-
-
-
-
-
-
-
-
-
-// DO NOT MODIFY
-// Used for automated testing
 try {
     module.exports = {
         basket: typeof basket !== 'undefined' ? basket : undefined,
