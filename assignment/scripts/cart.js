@@ -6,16 +6,22 @@ function addItem(item) {
     basket.push(item);
     return true;
 }
+addItem('apples');
+addItem('banana');
+addItem('juice');
 console.log(basket);
 function listItems() {
     for (let index = 0; index < basket.length; index++) {
         console.log(basket[index]);
     }
 }
+listItems();
+console.log(basket);
 function empty() {
-    basket = [];
-  }
-  empty();
+basket.length = 0;
+}
+empty();
+console.log(basket);
 
 try {
     module.exports = {
